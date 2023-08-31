@@ -24,14 +24,14 @@ jobs:
       - name: Build
         run: npm run build
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
+  # deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Deploy to Netlify
-        uses: netlify/actions/cli@v1
-        with:
-          args: deploy --prod
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  #   steps:
+  #     - name: Deploy to Netlify
+  #       uses: netlify/actions/cli@v1
+  #       with:
+  #         args: deploy --prod
+  #       env:
+  #         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
